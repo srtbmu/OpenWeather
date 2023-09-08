@@ -1,7 +1,6 @@
 package com.example.weather.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,7 +16,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainFragment : Fragment() {
 
     private lateinit var binding: FragmentMainBinding
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -33,16 +31,24 @@ class MainFragment : Fragment() {
 
     private fun navigateTo() {
         binding.btnSend.setOnClickListener {
-            if (binding.etFirst.length() != 0 && binding.etSecond.length() != 0) {
-                val lon = binding.etFirst.text.toString()
-                val lat = binding.etSecond.text.toString()
-                val units = binding.etUnits.text.toString()
-                findNavController().navigate(
-                    R.id.firstFragment,
-                    bundleOf("key_lon" to lon, "key_lat" to lat, "key_units" to units)
-                )
+            if (binding.etFirst.length() != 0 && binding.etSecond.length() != 0 && binding.etUnits.length() != 0) {
+                if (binding.etFirst.length() <= 5 && binding.etSecond.length() <= 5) {
+                    val lon = binding.etFirst.text.toString()
+                    val lat = binding.etSecond.text.toString()
+                    val units = binding.etUnits.text.toString()
+                    findNavController().navigate(
+                        R.id.firstFragment,
+                        bundleOf("key_lon" to lon, "key_lat" to lat, "key_units" to units)
+                    )
+                } else {
+                    Toast.makeText(
+                        requireContext(),
+                        "Не верные кординаты xx.xx",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
             } else {
-                Toast.makeText(requireContext(), "Null Movie", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Заполните строки", Toast.LENGTH_SHORT).show()
             }
         }
     }

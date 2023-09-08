@@ -13,9 +13,6 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 class AppModule {
-
-
-    //    https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
     @Singleton
     @Provides
     fun provideApi(): WeatherApi {
