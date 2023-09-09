@@ -4,54 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".ui.MainFragment">
 
-
-    <EditText
-        android:id="@+id/et_first"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#00000000"
-        android:hint="Введите ширину"
-        android:padding="8dp"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
+    <ImageView
+        android:id="@+id/iv_weather_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <EditText
-        android:id="@+id/et_second"
+        android:id="@+id/etFirst"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#00000000"
+        android:layout_marginTop="16dp"
         android:hint="Введите долготу"
-        android:padding="8dp"
-        android:textColor="@android:color/black"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColorHint="@color/black"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/et_first" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_weather_icon" />
 
+    <EditText
+        android:id="@+id/etSecond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Введите широту"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColorHint="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etFirst" />
 
     <EditText
         android:id="@+id/et_units"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#00000000"
-        android:hint="Введите units"
-        android:padding="8dp"
-        android:textColor="@android:color/black"
+        android:layout_marginTop="8dp"
+        android:hint="Введите единицы измерения"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColorHint="@color/black"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/et_second" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etSecond" />
 
     <Button
         android:id="@+id/btn_send"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/black"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:text="SEND"
+        android:text="Отправить"
         android:textColor="@android:color/white"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/et_units" />

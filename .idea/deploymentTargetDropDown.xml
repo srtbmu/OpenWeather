@@ -7,11 +7,11 @@
         <deviceKey>
           <Key>
             <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\yomor\.android\avd\Pixel_4_API_24.avd" />
+            <value value="C:\Users\yomor\.android\avd\Pixel_3a_API_33_x86_64.avd" />
           </Key>
         </deviceKey>
       </Target>
     </targetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2023-09-08T12:54:20.115480600Z" />
+    <timeTargetWasSelectedWithDropDown value="2023-09-09T06:40:21.984742800Z" />
   </component>
 </project>

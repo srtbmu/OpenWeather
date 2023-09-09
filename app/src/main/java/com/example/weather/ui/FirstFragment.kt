@@ -1,12 +1,11 @@
 package com.example.weather.ui
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.example.weather.databinding.FragmentFirstBinding
 import com.example.weather.model.Model
 import com.example.weather.presenter.FirstPresenter
@@ -42,9 +41,10 @@ class FirstFragment : Fragment(), FirstView {
     override fun showWeather(weatherModel: Model) {
         with(binding) {
             tvCountry.text = weatherModel.sys.country
-            tvTemp.text = weatherModel.main.temp.toString()
-            tvTempMin.text = weatherModel.main.temp_min.toString()
-            tvTempMax.text = weatherModel.main.temp_max.toString()
+            tvTemp.text = weatherModel.main.temp.toString() + "°C"
+
+//            tvTempMin.text = weatherModel.main.temp_min.toString()
+//            tvTempMax.text = weatherModel.main.temp_max.toString()
             tvName.text = weatherModel.name
         }
     }
