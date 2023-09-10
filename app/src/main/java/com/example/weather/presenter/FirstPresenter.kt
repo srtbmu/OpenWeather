@@ -1,7 +1,7 @@
 package com.example.weather.presenter
 
 import com.example.weather.model.Model
-import com.example.weather.model.WeatherApi
+import com.example.weather.remote.WeatherApi
 import com.example.weather.view.FirstView
 import retrofit2.Call
 import retrofit2.Callback

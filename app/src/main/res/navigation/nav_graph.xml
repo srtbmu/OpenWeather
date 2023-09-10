@@ -15,4 +15,9 @@
         android:name="com.example.weather.ui.FirstFragment"
         android:label="fragment_first"
         tools:layout="@layout/fragment_first" />
+    <activity
+        android:id="@+id/yandexActivity"
+        android:name="com.example.weather.YandexActivity"
+        android:label="activity_yandex"
+        tools:layout="@layout/activity_yandex" />
 </navigation>

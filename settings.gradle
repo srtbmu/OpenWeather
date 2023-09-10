@@ -10,6 +10,11 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+
+//    Yandex MapKit
+        maven {
+            url "https://maven.google.com/"
+        }
     }
 }
 
